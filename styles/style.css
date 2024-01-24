@@ -1,0 +1,376 @@
+@import url(fonts.css);
+
+:root {
+    --font-base: "Raleway";
+    --font-alt: "Roboto";
+    --body: #0C0C0C;
+    --color: #fff;
+    --title: #69CF17;
+    --logo-bg: #0A9418;
+    --logo-bd: #06600f;
+    --link-bg: rgba(105, 207, 23, 0.75);
+    --price: rgba(105, 207, 23, 0.5);
+    --header-link: linear-gradient(90deg, #69CF17 0%, #417D11 100%);
+    --tab-bg: #292929;
+    --product-bg: #393636;
+    --card-link:rgba(105, 207, 23, 0.9);
+    --footer-bg: linear-gradient(180deg, #000000 0%, rgba(105, 207, 23, 0.5) 100%);
+    --copyright: #1A3406;
+    --about-color: rgba(105, 207, 23, 0.7);
+    --about-shadow: rgba(191, 171, 171, 0.4);
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background: var(--body);
+    color: var(--color);
+    font-family: var(--font-base);
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--title);
+    border-radius: 3px;
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+
+.service {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    font-family: var(--font-alt);
+}
+
+.service a {
+    color: var(--color);
+}
+
+.service__menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service__icon {
+    font-size: 23px;
+    margin-right: 5px;
+}
+
+.service__map {
+    display: flex;
+}
+
+.service__link {
+    margin-left: 20px;
+}
+
+
+.nav {
+    background: rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(125, 115, 115, 0.5);
+    border-bottom: 1px solid rgba(125, 115, 115, 0.5);
+    backdrop-filter: blur(15px);
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    
+}.nav a {
+color: var(--color);
+}
+
+.nav__burger {
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--color);
+}
+.nav__burger i {
+    padding: 22px 10px 22px 14px;
+    display: none;
+    font-size: 40px;
+    line-height: 20px;
+}
+
+.nav__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    background: var(--logo-bg);
+    border: 4px solid var(--logo-bd);
+    border-radius: 4px;
+    font-family: var(--font-alt);
+    font-weight: 700;
+    font-size: 36px;
+    padding: 8px 14px;
+    line-height: 30px;
+    color: var(--color);
+    display: inline-block;
+}
+.menu {
+    display: flex;
+}
+.menu__link {
+    font-size: 18px;
+    padding: 22px 10px 22px 14px;
+    display: inline-block;
+    margin-left: 4px;
+    transition: 0.5s;
+
+}
+.menu__link:hover, .active {
+    background: var(--link-bg);
+
+}
+
+
+
+.header {
+    background: url(../img/food-burger-wallpaper-preview\ 1.jpg) no-repeat center / cover;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 20px 0; 
+}
+.header__title {
+    color: var(--title);
+    font-weight: 900;
+    font-size: 72px;
+    margin-bottom: 18px;
+    
+}
+
+.header__subtitle {
+    color: var(--title);
+    font-size: 36px;
+    line-height: 17px;
+    margin-bottom: 29px;
+
+}
+.header__desc {
+    font-size: 18px;
+    line-height: 24px;margin-bottom: 30px;
+
+}
+.header__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__price {
+    background: var(--price);
+    backdrop-filter: blur(18px);
+    padding: 33px 76px 45px 76px;
+    font-weight: 100;
+    font-size: 50px;
+    line-height: 25px;
+}
+.header__link {
+    background: var(--header-link);
+    border-radius: 6px;
+    max-width: 255px;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    color: var(--color);
+}
+
+.tab{
+    background: var(--tab-bg);
+    padding: 0 15px;
+    margin-top: 48px;
+}
+.tab__menu {
+    display: flex;
+    flex-wrap: wrap;
+}
+.tab__link {
+    color: var(--color);
+    font-size: 18px;
+    line-height: 24px;
+    padding: 20px 7px;
+    display: inline-block;
+    margin-right: 24px;
+    position: relative;
+}
+.tab__link::after {
+    content: '';
+    width: 0;
+    height: 1px;
+    display: block;
+    background: var(--color);     
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transition: 0.5s;
+    
+}
+.tab__link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.product {
+    background: var(--product-bg);
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px; 
+
+}
+
+.card {
+    padding: 15px 16px;
+    background: var(--body);
+    border: 1px solid var(--color);
+    border-radius: 4px;
+}
+.card__box {
+    height: 325px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px;
+}
+.card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card__link {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background:var(--card-link);
+    justify-content: center;
+    align-items: center;
+    color: var(--color);
+    font-size: 60px;
+    opacity: 0;
+    transition: 0.5s;
+}
+.card:hover .card__link {
+    opacity: 1;
+}
+.card__title {
+    font-size: 19px;
+    line-height: 15px;
+    margin-bottom: 15px;
+}
+.card__desc {
+    font-size: 19px;
+    line-height: 25px;
+    margin-bottom: 24px;
+}
+
+.map {
+    margin-top: 50px;
+    background: var(--color);
+}
+.map__title {
+    color: var(--title);
+    text-align: center;
+    font-size: 50px;
+    line-height: 40px;
+    padding: 20px;
+}
+.map__frame {
+    width: 100%;
+    height: 500px;
+}
+
+.footer {
+    background: var(--footer-bg) ;
+    padding-top: 30px;
+}
+.footer__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer__phone {
+    color: var(--color);
+    font-size: 20px;
+    font-weight: 700;
+    font-family: var(--font-alt);
+}
+.footer__menu {
+    display: flex;
+    justify-content: center;
+    padding: 81px 0;
+}
+.footer__link {
+    color: var(--color);
+    font-size: 20px;
+    font-family: var(--font-alt);
+    margin: 0 10px;
+}
+.footer__copyright {
+    text-align: center;
+    background: var(--copyright);
+    padding: 19px;
+    font-family: var(--font-alt);
+}
+
+    .about {
+    margin-top: 30px;
+
+    }
+    .about__box {
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .about__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .about__title {
+        position: absolute;
+        font-size: 55px;
+        text-transform: uppercase;
+        color: var(--about-color) ;
+        text-shadow: 0px 0px 15px var(--about-shadow);
+    }
+    .about__desc {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 25px;
+        text-align: justify;
+        margin-top: 30px;
+    }
